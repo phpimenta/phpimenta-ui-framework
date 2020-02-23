@@ -3,11 +3,11 @@
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@1.0.0/dist/css/phpimenta-ui.min.css" crossorigin>
+<link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.0/dist/css/phpimenta-ui.min.css" crossorigin>
 ```
 
 ```html
-<script crossorigin src="https://unpkg.com/phpimenta-ui-framework@1.0.0/dist/js/phpimenta-ui.min.js"></script>
+<script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.0/dist/js/phpimenta-ui.min.js"></script>
 ```
 
 **Install with NPM:**
