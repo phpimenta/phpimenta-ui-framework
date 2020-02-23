@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * Phpimenta UI Framework (v0.1.0)
+ * Phpimenta UI Framework (v0.1.1)
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  * --------------------------------------------------------------------------
