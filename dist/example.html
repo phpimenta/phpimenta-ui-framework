@@ -84,15 +84,46 @@
     </div>
 
     <div class="phpimenta-ui-field-wrapper">
+      <label>Input Group</label>
+      <div class="phpimenta-ui-input-group">
+        <div class="input-group-preppend">
+          http://www.
+        </div>
+        <input type="text" class="phpimenta-ui-field">
+        <div class="input-group-append">
+          .com
+        </div>
+      </div>
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label>Datepicker</label>
+      <input type="text" class="phpimenta-ui-field phpimenta-ui-datepicker" id="datepicker_example"
+        data-datepicker-target="datepicker_example">
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label>Datepicker icon</label>
+      <div class="phpimenta-ui-input-group">
+        <input type="text" class="phpimenta-ui-field" id="datepicker_example2">
+        <div class="input-group-append">
+          <button type="button" class="phpimenta-ui-datepicker phpimenta-ui-button"
+            data-datepicker-target="datepicker_example2">Open
+            calendar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
       <label>Select</label>
       <select class="phpimenta-ui-field phpimenta-ui-custom-select">
       </select>
     </div>
 
     <div class="phpimenta-ui-field-wrapper">
-      <div class="phpimenta-ui-switch" data-label-text="Toggle Switch">
+      <div class="phpimenta-ui-switch">
         <input type="checkbox" id="toggle" class="phpimenta-ui-checkbox" />
-        <label for="toggle"></label>
+        <label for="toggle">Toggle Switch</label>
       </div>
     </div>
   </section>
@@ -100,11 +131,22 @@
   <section>
     <h1>Grid</h1>
     <div class="phpimenta-ui-grid">
-      <div class="col col-sm50" style="background-color: blueviolet;">
-        A
+      <div class="col col-sm20" style="background-color: blueviolet;">
+        col-sm20
+      </div>
+      <div class="col col-sm30" style="background-color: aqua;">
+        col-sm30
       </div>
       <div class="col col-sm50" style="background-color: burlywood;">
-        Teste Teste Teste teste
+        col-sm-50
+      </div>
+    </div>
+    <div class="phpimenta-ui-grid">
+      <div class="col col-sm50" style="background-color: blueviolet;">
+        col-sm50
+      </div>
+      <div class="col col-sm50" style="background-color: burlywood;">
+        col-sm-50
       </div>
     </div>
   </section>
