@@ -8,7 +8,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Phpimenta UI Framework (v0.1.1)
+ * Phpimenta UI Framework (v0.1.2)
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  * --------------------------------------------------------------------------
@@ -53,7 +53,6 @@ window.addEventListener('click', function (event) {
 
     if (trigger.dataset.toggle !== event.target.dataset.toggle) {
       if (display == 'block') {
-        console.log(dropdownMenu);
         dropdownMenu.style.display = 'none';
       }
     }
@@ -83,47 +82,51 @@ function () {
   function Datepicker() {
     _classCallCheck(this, Datepicker);
 
-    this.current_datepicker;
     this.months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
     this.weekdays = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
     this.date = new Date();
-    this.currentDatepicker;
     this.currentDay = this.date.getDate();
     this.currentYear = this.date.getFullYear();
     this.currentMonth = this.date.getMonth();
+    this.dateFormat = 'dd-mm-yyyy';
+    this._currentInput;
   }
 
   _createClass(Datepicker, [{
     key: "enable",
     value: function enable() {
-      var datepickers = document.querySelectorAll('.phpimenta-ui-datepicker');
-
-      for (var i = 0; i < datepickers.length; i++) {
-        var self = this;
-        datepickers[i].addEventListener('click', function (event) {
-          self.currentDatepicker = event.target.dataset.datepickerTarget;
-          self.closeDatepickerModal();
-          self.createGraphicalInterface();
-        });
-      }
-
+      this.listener();
+    }
+  }, {
+    key: "listener",
+    value: function listener() {
       var self = this;
-      window.addEventListener('click', function (event) {
-        if (event.target.classList == "phpimenta-ui-datepicker-modal") {
-          self.closeDatepickerModal();
-        }
-      });
-      window.addEventListener('click', function (event) {
-        if (event.target.classList == "phpimenta-ui-datepicker-year-increase-button") {
-          self.closeDatepickerModal();
+
+      function listenerFunction(event) {
+        event.stopImmediatePropagation();
+        var classList = event.target.classList;
+
+        if (classList.toString().match(/phpimenta-ui-datepicker-modal/i)) {
+          self.close();
+        } else if (classList.toString().match(/phpimenta-ui-datepicker-link/i)) {
+          var day = event.target.innerHTML;
+          var date = self.convertDate(self.currentYear, self.currentMonth + 1, day);
+          var input = document.querySelector(self._currentInput);
+
+          if (input.value != undefined) {
+            input.value = date;
+          } else if (input.innerHTML != undefined) {
+            input.innerHTML = date;
+          }
+
+          self.close();
+        } else if (classList.toString().match(/phpimenta-ui-datepicker-year-increase-button/i)) {
           self.currentYear = self.currentYear + 1;
-          self.createGraphicalInterface();
-        } else if (event.target.classList == "phpimenta-ui-datepicker-year-decrease-button") {
-          self.closeDatepickerModal();
+          self.create(self._currentInput);
+        } else if (classList.toString().match(/phpimenta-ui-datepicker-year-decrease-button/i)) {
           self.currentYear = self.currentYear - 1;
-          self.createGraphicalInterface();
-        } else if (event.target.classList == "phpimenta-ui-datepicker-month-decrease-button") {
-          self.closeDatepickerModal();
+          self.create(self._currentInput);
+        } else if (classList.toString().match(/phpimenta-ui-datepicker-month-decrease-button/i)) {
           self.currentMonth = self.currentMonth - 1;
 
           if (self.currentMonth == -1) {
@@ -131,9 +134,8 @@ function () {
             self.currentYear = self.currentYear - 1;
           }
 
-          self.createGraphicalInterface();
-        } else if (event.target.classList == "phpimenta-ui-datepicker-month-increase-button") {
-          self.closeDatepickerModal();
+          self.create(self._currentInput);
+        } else if (classList.toString().match(/phpimenta-ui-datepicker-month-increase-button/i)) {
           self.currentMonth = self.currentMonth + 1;
 
           if (self.currentMonth == 12) {
@@ -141,12 +143,38 @@ function () {
             self.currentYear = self.currentYear + 1;
           }
 
-          self.createGraphicalInterface();
-        } else if (event.target.classList.toString().match(/phpimenta-ui-datepicker-link/i)) {
-          var month = (self.currentMonth + 1).toString().padStart(2, "0");
-          document.querySelector('#' + self.currentDatepicker).value = event.target.innerHTML + "/" + month + "/" + self.currentYear;
-          self.closeDatepickerModal();
+          self.create(self._currentInput);
         }
+      }
+
+      window.removeEventListener('click', listenerFunction);
+      window.addEventListener('click', listenerFunction);
+    }
+  }, {
+    key: "convertDate",
+    value: function convertDate(year, month, day) {
+      month = month.toString().padStart(2, '0');
+      day = day.toString().padStart(2, '0');
+
+      if (this.dateFormat == 'dd-mm-yyyy') {
+        return day + '/' + month + '/' + year;
+      } else if (this.dateFormat == 'yyyy-mm-dd') {
+        return year + '/' + month + '/' + day;
+      }
+    }
+  }, {
+    key: "create",
+    value: function create(input) {
+      this._currentInput = input;
+      this.close();
+      this.createGUI();
+    }
+  }, {
+    key: "close",
+    value: function close() {
+      var modals = document.querySelectorAll('.phpimenta-ui-datepicker-modal');
+      modals.forEach(function (modal) {
+        modal.remove();
       });
     }
   }, {
@@ -161,16 +189,8 @@ function () {
       return new Date(year, month, day).getDay();
     }
   }, {
-    key: "closeDatepickerModal",
-    value: function closeDatepickerModal() {
-      modals = document.querySelectorAll('.phpimenta-ui-datepicker-modal');
-      modals.forEach(function (modal) {
-        modal.remove();
-      });
-    }
-  }, {
-    key: "createGraphicalInterface",
-    value: function createGraphicalInterface() {
+    key: "createGUI",
+    value: function createGUI() {
       var modalContent = document.createElement('div');
       modalContent.className = 'phpimenta-ui-datepicker-modal-content';
       var table = document.createElement('table');
@@ -238,7 +258,7 @@ function () {
               td.classList = 'current-date phpimenta-ui-datepicker-link';
             }
 
-            td.innerHTML = "01";
+            td.innerHTML = '01';
             trBody.appendChild(td);
             tbody.appendChild(trBody);
           } else {
@@ -256,7 +276,7 @@ function () {
             _td2.classList = 'current-date phpimenta-ui-datepicker-link';
           }
 
-          _td2.innerHTML = d.toString().padStart(2, "0");
+          _td2.innerHTML = d.toString().padStart(2, '0');
           trBody.appendChild(_td2);
           tbody.appendChild(trBody);
         }
@@ -282,4 +302,8 @@ function () {
 
 var datepicker = new Datepicker();
 datepicker.enable();
+
+window.phpimentaDatepicker = function (input) {
+  datepicker.create(input);
+};
 //# sourceMappingURL=phpimenta-ui.js.map

@@ -1,9 +1,9 @@
 /*!
- * Phpimenta UI Framework v0.1.1
+ * Phpimenta UI Framework v0.1.2
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -50,6 +50,206 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+/*!
+ * Phpimenta UI Framework v0.1.2
+ * Copyright 2020-2020 Phpimenta Software e Consultoria
+ * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
+ */
+.phpimenta-ui-datepicker-modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1072; }
+  .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content {
+    width: 250px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3rem;
+    margin: auto;
+    background-color: #ffffff; }
+    .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table {
+      font-size: 0.875rem;
+      table-layout: fixed;
+      border: 0px; }
+      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption {
+        font-weight: normal; }
+        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption button {
+          margin: 0rem 0.25rem;
+          padding: 0.375rem 0.5rem;
+          background-color: transparent;
+          border: 0px;
+          outline: 0rem;
+          cursor: pointer;
+          font-size: 1.25rem; }
+        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-month {
+          float: left; }
+          .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-month span {
+            display: inline-block;
+            width: 60px; }
+        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-year {
+          float: right; }
+          .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-year span {
+            display: inline-block;
+            width: 36px; }
+      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table thead tr th,
+      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table tbody tr td {
+        padding: 0.5rem 0.25rem;
+        text-align: center;
+        font-weight: normal;
+        width: 35px;
+        border: 0px; }
+      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table tbody tr td {
+        cursor: pointer; }
+        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table tbody tr td.current-date {
+          background-color: #e0e0e0; }
+
+/*!
+ * Phpimenta UI Framework v0.1.2
+ * Copyright 2020-2020 Phpimenta Software e Consultoria
+ * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
+ */
+.phpimenta-ui-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; }
+  .phpimenta-ui-grid .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    padding: 0.75rem; }
+    @media screen and (min-width: 568px) {
+      .phpimenta-ui-grid .col.col-sm-10 {
+        flex: 0 0 10%;
+        max-width: 10%; }
+      .phpimenta-ui-grid .col.col-sm-20 {
+        flex: 0 0 20%;
+        max-width: 20%; }
+      .phpimenta-ui-grid .col.col-sm-30 {
+        flex: 0 0 30%;
+        max-width: 30%; }
+      .phpimenta-ui-grid .col.col-sm-40 {
+        flex: 0 0 40%;
+        max-width: 40%; }
+      .phpimenta-ui-grid .col.col-sm-50 {
+        flex: 0 0 50%;
+        max-width: 50%; }
+      .phpimenta-ui-grid .col.col-sm-60 {
+        flex: 0 0 60%;
+        max-width: 60%; }
+      .phpimenta-ui-grid .col.col-sm-70 {
+        flex: 0 0 70%;
+        max-width: 70%; }
+      .phpimenta-ui-grid .col.col-sm-80 {
+        flex: 0 0 80%;
+        max-width: 80%; }
+      .phpimenta-ui-grid .col.col-sm-90 {
+        flex: 0 0 90%;
+        max-width: 90%; }
+      .phpimenta-ui-grid .col.col-sm-100 {
+        flex: 0 0 100%;
+        max-width: 100%; } }
+    @media screen and (min-width: 768px) {
+      .phpimenta-ui-grid .col.col-md-10 {
+        flex: 0 0 10%;
+        max-width: 10%; }
+      .phpimenta-ui-grid .col.col-md-20 {
+        flex: 0 0 20%;
+        max-width: 20%; }
+      .phpimenta-ui-grid .col.col-md-30 {
+        flex: 0 0 30%;
+        max-width: 30%; }
+      .phpimenta-ui-grid .col.col-md-40 {
+        flex: 0 0 40%;
+        max-width: 40%; }
+      .phpimenta-ui-grid .col.col-md-50 {
+        flex: 0 0 50%;
+        max-width: 50%; }
+      .phpimenta-ui-grid .col.col-md-60 {
+        flex: 0 0 60%;
+        max-width: 60%; }
+      .phpimenta-ui-grid .col.col-md-70 {
+        flex: 0 0 70%;
+        max-width: 70%; }
+      .phpimenta-ui-grid .col.col-md-80 {
+        flex: 0 0 80%;
+        max-width: 80%; }
+      .phpimenta-ui-grid .col.col-md-90 {
+        flex: 0 0 90%;
+        max-width: 90%; }
+      .phpimenta-ui-grid .col.col-md-100 {
+        flex: 0 0 100%;
+        max-width: 100%; } }
+    @media screen and (min-width: 1024px) {
+      .phpimenta-ui-grid .col.col-lg-10 {
+        flex: 0 0 10%;
+        max-width: 10%; }
+      .phpimenta-ui-grid .col.col-lg-20 {
+        flex: 0 0 20%;
+        max-width: 20%; }
+      .phpimenta-ui-grid .col.col-lg-30 {
+        flex: 0 0 30%;
+        max-width: 30%; }
+      .phpimenta-ui-grid .col.col-lg-40 {
+        flex: 0 0 40%;
+        max-width: 40%; }
+      .phpimenta-ui-grid .col.col-lg-50 {
+        flex: 0 0 50%;
+        max-width: 50%; }
+      .phpimenta-ui-grid .col.col-lg-60 {
+        flex: 0 0 60%;
+        max-width: 60%; }
+      .phpimenta-ui-grid .col.col-lg-70 {
+        flex: 0 0 70%;
+        max-width: 70%; }
+      .phpimenta-ui-grid .col.col-lg-80 {
+        flex: 0 0 80%;
+        max-width: 80%; }
+      .phpimenta-ui-grid .col.col-lg-90 {
+        flex: 0 0 90%;
+        max-width: 90%; }
+      .phpimenta-ui-grid .col.col-lg-100 {
+        flex: 0 0 100%;
+        max-width: 100%; } }
+    @media screen and (min-width: 1280px) {
+      .phpimenta-ui-grid .col.col-xl-10 {
+        flex: 0 0 10%;
+        max-width: 10%; }
+      .phpimenta-ui-grid .col.col-xl-20 {
+        flex: 0 0 20%;
+        max-width: 20%; }
+      .phpimenta-ui-grid .col.col-xl-30 {
+        flex: 0 0 30%;
+        max-width: 30%; }
+      .phpimenta-ui-grid .col.col-xl-40 {
+        flex: 0 0 40%;
+        max-width: 40%; }
+      .phpimenta-ui-grid .col.col-xl-50 {
+        flex: 0 0 50%;
+        max-width: 50%; }
+      .phpimenta-ui-grid .col.col-xl-60 {
+        flex: 0 0 60%;
+        max-width: 60%; }
+      .phpimenta-ui-grid .col.col-xl-70 {
+        flex: 0 0 70%;
+        max-width: 70%; }
+      .phpimenta-ui-grid .col.col-xl-80 {
+        flex: 0 0 80%;
+        max-width: 80%; }
+      .phpimenta-ui-grid .col.col-xl-90 {
+        flex: 0 0 90%;
+        max-width: 90%; }
+      .phpimenta-ui-grid .col.col-xl-100 {
+        flex: 0 0 100%;
+        max-width: 100%; } }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -231,14 +431,14 @@ label {
   width: 100%; }
   .phpimenta-ui-table caption {
     padding: 0.5em 1em;
-    font-weight: bold; }
+    font-weight: 500; }
   .phpimenta-ui-table thead {
     background-color: #e0e0e0;
     color: #000;
     text-align: left;
     vertical-align: bottom; }
     .phpimenta-ui-table thead th {
-      font-weight: bold; }
+      font-weight: 500; }
   .phpimenta-ui-table th,
   .phpimenta-ui-table td {
     border: 1px solid #c8c8c8;
@@ -273,140 +473,6 @@ label {
     background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1)); }
 
-.phpimenta-ui-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 1rem; }
-  .phpimenta-ui-grid .col {
-    flex: 0 0 100%;
-    max-width: 100%;
-    word-wrap: break-word;
-    padding: 0.75rem; }
-    @media screen and (min-width: 568px) {
-      .phpimenta-ui-grid .col.col-sm10 {
-        flex: 0 0 10%;
-        max-width: 10%; }
-      .phpimenta-ui-grid .col.col-sm20 {
-        flex: 0 0 20%;
-        max-width: 20%; }
-      .phpimenta-ui-grid .col.col-sm30 {
-        flex: 0 0 30%;
-        max-width: 30%; }
-      .phpimenta-ui-grid .col.col-sm40 {
-        flex: 0 0 40%;
-        max-width: 40%; }
-      .phpimenta-ui-grid .col.col-sm50 {
-        flex: 0 0 50%;
-        max-width: 50%; }
-      .phpimenta-ui-grid .col.col-sm60 {
-        flex: 0 0 60%;
-        max-width: 60%; }
-      .phpimenta-ui-grid .col.col-sm70 {
-        flex: 0 0 70%;
-        max-width: 70%; }
-      .phpimenta-ui-grid .col.col-sm80 {
-        flex: 0 0 80%;
-        max-width: 80%; }
-      .phpimenta-ui-grid .col.col-sm90 {
-        flex: 0 0 90%;
-        max-width: 90%; }
-      .phpimenta-ui-grid .col.col-sm100 {
-        flex: 0 0 100%;
-        max-width: 100%; } }
-    @media screen and (min-width: 768px) {
-      .phpimenta-ui-grid .col.col-md10 {
-        flex: 0 0 10%;
-        max-width: 10%; }
-      .phpimenta-ui-grid .col.col-md20 {
-        flex: 0 0 20%;
-        max-width: 20%; }
-      .phpimenta-ui-grid .col.col-md30 {
-        flex: 0 0 30%;
-        max-width: 30%; }
-      .phpimenta-ui-grid .col.col-md40 {
-        flex: 0 0 40%;
-        max-width: 40%; }
-      .phpimenta-ui-grid .col.col-md50 {
-        flex: 0 0 50%;
-        max-width: 50%; }
-      .phpimenta-ui-grid .col.col-md60 {
-        flex: 0 0 60%;
-        max-width: 60%; }
-      .phpimenta-ui-grid .col.col-md70 {
-        flex: 0 0 70%;
-        max-width: 70%; }
-      .phpimenta-ui-grid .col.col-md80 {
-        flex: 0 0 80%;
-        max-width: 80%; }
-      .phpimenta-ui-grid .col.col-md90 {
-        flex: 0 0 90%;
-        max-width: 90%; }
-      .phpimenta-ui-grid .col.col-md100 {
-        flex: 0 0 100%;
-        max-width: 100%; } }
-    @media screen and (min-width: 1024px) {
-      .phpimenta-ui-grid .col.col-lg10 {
-        flex: 0 0 10%;
-        max-width: 10%; }
-      .phpimenta-ui-grid .col.col-lg20 {
-        flex: 0 0 20%;
-        max-width: 20%; }
-      .phpimenta-ui-grid .col.col-lg30 {
-        flex: 0 0 30%;
-        max-width: 30%; }
-      .phpimenta-ui-grid .col.col-lg40 {
-        flex: 0 0 40%;
-        max-width: 40%; }
-      .phpimenta-ui-grid .col.col-lg50 {
-        flex: 0 0 50%;
-        max-width: 50%; }
-      .phpimenta-ui-grid .col.col-lg60 {
-        flex: 0 0 60%;
-        max-width: 60%; }
-      .phpimenta-ui-grid .col.col-lg70 {
-        flex: 0 0 70%;
-        max-width: 70%; }
-      .phpimenta-ui-grid .col.col-lg80 {
-        flex: 0 0 80%;
-        max-width: 80%; }
-      .phpimenta-ui-grid .col.col-lg90 {
-        flex: 0 0 90%;
-        max-width: 90%; }
-      .phpimenta-ui-grid .col.col-lg100 {
-        flex: 0 0 100%;
-        max-width: 100%; } }
-    @media screen and (min-width: 1280px) {
-      .phpimenta-ui-grid .col.col-xl10 {
-        flex: 0 0 10%;
-        max-width: 10%; }
-      .phpimenta-ui-grid .col.col-xl20 {
-        flex: 0 0 20%;
-        max-width: 20%; }
-      .phpimenta-ui-grid .col.col-xl30 {
-        flex: 0 0 30%;
-        max-width: 30%; }
-      .phpimenta-ui-grid .col.col-xl40 {
-        flex: 0 0 40%;
-        max-width: 40%; }
-      .phpimenta-ui-grid .col.col-xl50 {
-        flex: 0 0 50%;
-        max-width: 50%; }
-      .phpimenta-ui-grid .col.col-xl60 {
-        flex: 0 0 60%;
-        max-width: 60%; }
-      .phpimenta-ui-grid .col.col-xl70 {
-        flex: 0 0 70%;
-        max-width: 70%; }
-      .phpimenta-ui-grid .col.col-xl80 {
-        flex: 0 0 80%;
-        max-width: 80%; }
-      .phpimenta-ui-grid .col.col-xl90 {
-        flex: 0 0 90%;
-        max-width: 90%; }
-      .phpimenta-ui-grid .col.col-xl100 {
-        flex: 0 0 100%;
-        max-width: 100%; } }
-
 .phpimenta-ui-modal {
   display: none;
   position: fixed;
@@ -437,7 +503,7 @@ label {
       .phpimenta-ui-modal .modal-content .modal-header .btn-close {
         margin-left: auto;
         font-size: 2rem;
-        font-weight: bold;
+        font-weight: 500;
         display: block;
         padding: 0.5rem;
         margin: -0.5rem;
@@ -447,62 +513,6 @@ label {
     .phpimenta-ui-modal .modal-content .modal-footer {
       padding: 0.75rem;
       border-top: 1px solid #cccccc; }
-
-.phpimenta-ui-datepicker-modal {
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: #000;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1072; }
-  .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content {
-    width: 250px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 3rem;
-    margin: auto;
-    background-color: #ffffff; }
-    .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table {
-      font-size: 0.875rem;
-      table-layout: fixed;
-      border: 0px; }
-      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption {
-        font-weight: normal; }
-        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption button {
-          margin: 0rem 0.25rem;
-          padding: 0.375rem 0.5rem;
-          background-color: transparent;
-          border: 0px;
-          outline: 0rem;
-          cursor: pointer;
-          font-size: 1.25rem; }
-        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-month {
-          float: left; }
-          .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-month span {
-            display: inline-block;
-            width: 60px; }
-        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-year {
-          float: right; }
-          .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table caption .header-year span {
-            display: inline-block;
-            width: 36px; }
-      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table thead tr th,
-      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table tbody tr td {
-        padding: 0.5rem 0.25rem;
-        text-align: center;
-        font-weight: normal;
-        width: 35px;
-        border: 0px; }
-      .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table tbody tr td {
-        cursor: pointer; }
-        .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table tbody tr td.current-date {
-          background-color: #e0e0e0; }
 
 .phpimenta-ui-input-group {
   position: relative;
@@ -518,5 +528,46 @@ label {
   .phpimenta-ui-input-group .input-group-append {
     display: flex;
     margin-left: auto; }
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2; }
+
+h1,
+.h1 {
+  font-size: 2.5rem; }
+
+h2,
+.h2 {
+  font-size: 2rem; }
+
+h3,
+.h3 {
+  font-size: 1.75rem; }
+
+h4,
+.h4 {
+  font-size: 1.5rem; }
+
+h5,
+.h5 {
+  font-size: 1.25rem; }
+
+h6,
+.h6 {
+  font-size: 1rem; }
 
 /*# sourceMappingURL=phpimenta-ui.css.map */
