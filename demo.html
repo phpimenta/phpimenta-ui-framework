@@ -6,7 +6,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Phpimenta UI Framework</title>
-  <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.2/dist/css/phpimenta-ui.min.css" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.3/dist/css/phpimenta-ui.min.css"
+    crossorigin>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
 
@@ -68,6 +69,27 @@
   </section>
 
   <section>
+    <h1>Datepicker</h1>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label>Datepicker</label>
+      <input type="text" class="phpimenta-ui-field" id="datepicker_example" data-datepicker-target="datepicker_example"
+        onclick="phpimenta_datepicker('#datepicker_example')">
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label>Datepicker icon</label>
+      <div class="phpimenta-ui-input-group">
+        <input type="text" class="phpimenta-ui-field" id="datepicker_example2">
+        <div class="input-group-append">
+          <button type="button" class="phpimenta-ui-button" onclick="phpimenta_datepicker('#datepicker_example2')">Open
+            calendar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h1>Dropdowns</h1>
     <button class="phpimenta-ui-button phpimenta-dropdown-trigger" data-toggle="dropdownExample2">DropDown 2</button>
     <div class="phpimenta-dropdown-content" id="dropdownExample2">
@@ -92,24 +114,6 @@
         <input type="text" class="phpimenta-ui-field">
         <div class="input-group-append">
           .com
-        </div>
-      </div>
-    </div>
-
-    <div class="phpimenta-ui-field-wrapper">
-      <label>Datepicker</label>
-      <input type="text" class="phpimenta-ui-field phpimenta-ui-datepicker" id="datepicker_example"
-        data-datepicker-target="datepicker_example">
-    </div>
-
-    <div class="phpimenta-ui-field-wrapper">
-      <label>Datepicker icon</label>
-      <div class="phpimenta-ui-input-group">
-        <input type="text" class="phpimenta-ui-field" id="datepicker_example2">
-        <div class="input-group-append">
-          <button type="button" class="phpimenta-ui-datepicker phpimenta-ui-button"
-            data-datepicker-target="datepicker_example2">Open
-            calendar</button>
         </div>
       </div>
     </div>
@@ -298,7 +302,7 @@
       </div>
     </div>
   </section>
-  <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.2/dist/js/phpimenta-ui.min.js"></script>
+  <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.3/dist/js/phpimenta-ui.min.js"></script>
 </body>
 
 </html>

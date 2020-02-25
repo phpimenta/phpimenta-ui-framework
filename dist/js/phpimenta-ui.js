@@ -8,7 +8,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Phpimenta UI Framework (v0.1.2)
+ * Phpimenta UI Framework (v0.1.3)
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  * --------------------------------------------------------------------------
@@ -303,7 +303,7 @@ function () {
 var datepicker = new Datepicker();
 datepicker.enable();
 
-window.phpimentaDatepicker = function (input) {
+window.phpimenta_datepicker = function (input) {
   datepicker.create(input);
 };
 //# sourceMappingURL=phpimenta-ui.js.map
