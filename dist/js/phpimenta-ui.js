@@ -8,28 +8,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /**
  * --------------------------------------------------------------------------
- * Phpimenta UI Framework (v0.1.8)
+ * Phpimenta UI Framework (v0.1.9)
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-window.addEventListener('load', function () {
-  var cards = document.querySelectorAll(".phpimenta-ui-card-collapse .phpimenta-ui-card");
-  var header;
-  var body;
-  cards.forEach(function (card) {
-    Array.from(card.children).forEach(function (element) {
-      if (element.classList.value.match(/phpimenta-ui-card-header/i)) {
-        header = element;
-      } else if (element.classList.value.match(/phpimenta-ui-card-body/i)) {
-        body = element;
-      }
-    });
-    header.addEventListener("click", function (event) {
-      card.classList.toggle("show");
-    });
-  });
-});
 var files = document.querySelectorAll('.phpimenta-ui-upload input[type=file]');
 files.forEach(function (file) {
   file.addEventListener('change', function (event) {

@@ -1,5 +1,5 @@
 /*!
- * Phpimenta UI Framework v0.1.8
+ * Phpimenta UI Framework v0.1.9
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
@@ -396,33 +396,6 @@ label {
   }
   .phpimenta-ui-card-footer {
     border-top: 1px solid #c8c8c8;
-  }
-}
-
-.phpimenta-ui-card-collapse {
-  .phpimenta-ui-card {
-    .phpimenta-ui-card-header {
-      position: relative;
-      border-radius: 0px;
-      text-align: center;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    .phpimenta-ui-card-body {
-      display: none;
-    }
-    &.show {
-      .phpimenta-ui-card-body {
-        display: block;
-      }
-    }
   }
 }
 

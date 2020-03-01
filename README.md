@@ -10,13 +10,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Phpimenta UI Framework CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.8/dist/css/phpimenta-ui.min.css" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.9/dist/css/phpimenta-ui.min.css" crossorigin>
     <title>Hello, world!</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
     <!-- Phpimenta UI Framework JavaScript -->
-    <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.8/dist/js/phpimenta-ui.min.js"></script>
+    <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.9/dist/js/phpimenta-ui.min.js"></script>
   </body>
 </html>
 ```
@@ -24,11 +24,11 @@
 **Use From the CDN:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.8/dist/css/phpimenta-ui.min.css" crossorigin>
+<link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.9/dist/css/phpimenta-ui.min.css" crossorigin>
 ```
 
 ```html
-<script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.8/dist/js/phpimenta-ui.min.js"></script>
+<script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.9/dist/js/phpimenta-ui.min.js"></script>
 ```
 
 **Install with NPM:**
