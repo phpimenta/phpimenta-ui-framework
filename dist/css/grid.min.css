@@ -1,5 +1,5 @@
 /*!
- * Phpimenta UI Framework v0.1.5
+ * Phpimenta UI Framework v0.1.6
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */.phpimenta-ui-grid{display:block;flex-wrap:wrap;margin-bottom:1rem}@media screen and (min-width:568px){.phpimenta-ui-grid.small{display:flex}}@media screen and (min-width:768px){.phpimenta-ui-grid.medium{display:flex}}@media screen and (min-width:1024px){.phpimenta-ui-grid.large{display:flex}}@media screen and (min-width:1280px){.phpimenta-ui-grid.extra-large{display:flex}}.phpimenta-ui-grid .column{display:block;flex-basis:0;flex-grow:1;flex-shrink:1;padding:.75rem}.phpimenta-ui-grid .column.is-three-quarters{flex:none;width:75%}.phpimenta-ui-grid .column.is-two-thirds{flex:none;width:66.6666%}.phpimenta-ui-grid .column.is-half{flex:none;width:50%}.phpimenta-ui-grid .column.is-one-third{flex:none;width:33.3333%}.phpimenta-ui-grid .column.is-one-quarter{flex:none;width:25%}.phpimenta-ui-grid .column.is-one-fifth{flex:none;width:20%}.phpimenta-ui-grid .column.is-full{flex:none;width:100%}
