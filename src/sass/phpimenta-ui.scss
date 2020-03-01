@@ -1,5 +1,5 @@
 /*!
- * Phpimenta UI Framework v0.1.6
+ * Phpimenta UI Framework v0.1.7
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
@@ -380,22 +380,49 @@ label {
   border: 1px solid #c8c8c8;
   margin-bottom: 1rem;
   word-wrap: break-word;
-  .card-header,
-  .card-footer {
+  .phpimenta-ui-card-header,
+  .phpimenta-ui-card-footer {
     background-color: #e0e0e0;
     padding: 0.75rem 1.25rem;
   }
-  .card-header {
+  .phpimenta-ui-card-header {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
     border-bottom: 1px solid #c8c8c8;
   }
-  .card-body {
+  .phpimenta-ui-card-body {
     padding: 1.25rem;
     flex: 1 1 auto;
     background-color: #ffffff;
   }
-  .card-footer {
+  .phpimenta-ui-card-footer {
     border-top: 1px solid #c8c8c8;
+  }
+}
+
+.phpimenta-ui-card-collapse {
+  .phpimenta-ui-card {
+    .phpimenta-ui-card-header {
+      position: relative;
+      border-radius: 0px;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .phpimenta-ui-card-body {
+      display: none;
+    }
+    &.show {
+      .phpimenta-ui-card-body {
+        display: block;
+      }
+    }
   }
 }
 

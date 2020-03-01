@@ -1,10 +1,28 @@
 /**
  * --------------------------------------------------------------------------
- * Phpimenta UI Framework (v0.1.6)
+ * Phpimenta UI Framework (v0.1.7)
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
+
+let cards = document.querySelectorAll(
+  ".phpimenta-ui-card-collapse .phpimenta-ui-card"
+);
+let header;
+let body;
+cards.forEach(card => {
+  Array.from(card.children).forEach(element => {
+    if (element.classList.value.match(/card-header/i)) {
+      header = element;
+    } else if (element.classList.value.match(/card-body/i)) {
+      body = element;
+    }
+  });
+  header.addEventListener("click", function (event) {
+    card.classList.toggle("show");
+  });
+});
 
 let files = document.querySelectorAll('.phpimenta-ui-upload input[type=file]');
 
