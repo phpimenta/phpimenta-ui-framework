@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                     ext: '.min.js'
                 }]
             }
-        }
+        },
     });
 
     grunt.registerTask('default', ['clean', 'sass', 'cssmin', 'babel', 'uglify']);

@@ -1,5 +1,5 @@
 /*!
- * Phpimenta UI Framework v0.1.4
+ * Phpimenta UI Framework v0.1.5
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
@@ -39,6 +39,47 @@ a {
   padding-right: 0.5rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.phpimenta-ui-upload {
+  position: relative;
+  label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      display: block;
+      height: calc(1.5em + 0.75rem);
+      padding: 0.375rem 0.75rem;
+      line-height: 1.5;
+      color: #495057;
+      content: attr(data-upload-button-label);
+      background-color: #e0e0e0;
+      border-left: inherit;
+    }
+  }
+  input[type='file'] {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin: 0;
+    opacity: 0;
+  }
 }
 
 .phpimenta-ui-pagination {
@@ -489,6 +530,28 @@ label {
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
+  .input-group-icon {
+    position: absolute;
+    top: 0.5rem;
+    background-color: #fff;
+    display: block;
+  }
+  &.left-icon {
+    .input-group-icon {
+      left: 0.5rem;
+    }
+    .phpimenta-ui-field {
+      padding-left: 2rem;
+    }
+  }
+  &.right-icon {
+    .input-group-icon {
+      right: 0.5rem;
+    }
+    .phpimenta-ui-field {
+      padding-right: 2rem;
+    }
+  }
   .phpimenta-ui-field {
     flex: 1 1 0%;
   }

@@ -6,8 +6,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Phpimenta UI Framework</title>
-  <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.4/dist/css/phpimenta-ui.min.css"
+  <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.1.5/dist/css/phpimenta-ui.min.css"
     crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+    integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
 
@@ -65,7 +67,7 @@
 
     <div class="phpimenta-ui-field-wrapper">
       <label>Datepicker</label>
-      <input type="text" class="phpimenta-ui-field" id="datepicker_example" data-datepicker-target="datepicker_example"
+      <input type="text" class="phpimenta-ui-field" id="datepicker_example"
         onclick="phpimenta_datepicker('#datepicker_example')">
     </div>
 
@@ -92,6 +94,7 @@
 
   <section>
     <h2>Forms</h2>
+
     <div class="phpimenta-ui-field-wrapper">
       <label>Input</label>
       <input type="text" class="phpimenta-ui-field">
@@ -111,9 +114,47 @@
     </div>
 
     <div class="phpimenta-ui-field-wrapper">
+      <label>Input group left icon</label>
+      <div class="phpimenta-ui-input-group left-icon">
+        <div class="input-group-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" class="phpimenta-ui-field">
+      </div>
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label>Input group right icon</label>
+      <div class="phpimenta-ui-input-group right-icon">
+        <div class="input-group-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" class="phpimenta-ui-field">
+      </div>
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
       <label>Select</label>
       <select class="phpimenta-ui-field phpimenta-ui-custom-select">
       </select>
+    </div>
+
+    <h3>Upload</h3>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label>Single upload</label>
+      <div class="phpimenta-ui-upload">
+        <label data-upload-button-label="Upload">Selecionar um arquivo</label>
+        <input type="file">
+      </div>
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label>Multiple upload</label>
+      <div class="phpimenta-ui-upload">
+        <label data-upload-button-label="Upload">Selecionar um arquivo</label>
+        <input type="file" multiple>
+      </div>
     </div>
 
     <h3>Radio</h3>
@@ -180,23 +221,50 @@
 
   <section>
     <h2>Grid</h2>
-    <div class="phpimenta-ui-grid">
-      <div class="col col-sm-20" style="background-color: blueviolet;">
-        col-sm-20
+
+    <h3>Small breakpoint</h3>
+    <div class="phpimenta-ui-grid small">
+      <div class="column is-three-quarters" style="background-color: aqua;">
+        column is-three-quarters
       </div>
-      <div class="col col-sm-30" style="background-color: aqua;">
-        col-sm-30
-      </div>
-      <div class="col col-sm-50" style="background-color: burlywood;">
-        col-sm-50
+      <div class="column" style="background-color: burlywood;">
+        column
       </div>
     </div>
-    <div class="phpimenta-ui-grid">
-      <div class="col col-lg-50" style="background-color: blueviolet;">
-        col-lg-50
+
+    <h3>Medium breakpoint</h3>
+    <div class="phpimenta-ui-grid medium">
+      <div class="column is-half" style="background-color: chocolate;">
+        column is-half
       </div>
-      <div class="col col-lg-50" style="background-color: burlywood;">
-        col-lg-50
+      <div class="column is-one-quarter" style="background-color: greenyellow;">
+        column is-one-quarter
+      </div>
+      <div class="column is-one-quarter" style="background-color: goldenrod;">
+        column is-one-quarter
+      </div>
+    </div>
+
+    <h3>Large breakpoint</h3>
+    <div class="phpimenta-ui-grid large">
+      <div class="column is-full" style="background-color: blueviolet;">
+        column is-full
+      </div>
+    </div>
+
+    <h3>Extra large breakpoint</h3>
+    <div class="phpimenta-ui-grid extra-large">
+      <div class="column" style="background-color: indianred;">
+        column
+      </div>
+      <div class="column" style="background-color: lemonchiffon;">
+        column
+      </div>
+      <div class="column" style="background-color: lightseagreen;">
+        column
+      </div>
+      <div class="column" style="background-color: peru;">
+        column
       </div>
     </div>
   </section>
@@ -372,7 +440,7 @@
       </div>
     </div>
   </section>
-  <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.4/dist/js/phpimenta-ui.min.js"></script>
+  <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.1.5/dist/js/phpimenta-ui.min.js"></script>
 </body>
 
 </html>
