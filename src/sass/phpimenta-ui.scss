@@ -1,5 +1,5 @@
 /*!
- * Phpimenta UI Framework v0.1.9
+ * Phpimenta UI Framework v0.2.0
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
@@ -517,9 +517,7 @@ label {
 
 .phpimenta-ui-input-group {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: table;
   width: 100%;
   .input-group-icon {
     position: absolute;
@@ -543,16 +541,17 @@ label {
       padding-right: 2rem;
     }
   }
-  .phpimenta-ui-field {
-    flex: 1 1 0%;
-  }
   .input-group-prepend {
-    display: flex;
+    display: table-cell;
     margin-right: auto;
+    vertical-align: middle;
+    padding: 0.5rem;
   }
   .input-group-append {
-    display: flex;
+    display: table-cell;
     margin-left: auto;
+    vertical-align: middle;
+    padding: 0.5rem;
   }
 }
 
@@ -603,3 +602,4 @@ h6,
 .h6 {
   font-size: 1rem;
 }
+

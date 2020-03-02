@@ -1,5 +1,5 @@
 /*!
- * Phpimenta UI Framework v0.1.9
+ * Phpimenta UI Framework v0.2.0
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
@@ -51,7 +51,7 @@ table {
   border-spacing: 0; }
 
 /*!
- * Phpimenta UI Framework v0.1.9
+ * Phpimenta UI Framework v0.2.0
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
@@ -112,7 +112,7 @@ table {
           background-color: #e0e0e0; }
 
 /*!
- * Phpimenta UI Framework v0.1.9
+ * Phpimenta UI Framework v0.2.0
  * Copyright 2020-2020 Phpimenta Software e Consultoria
  * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
  */
@@ -572,9 +572,7 @@ label {
 
 .phpimenta-ui-input-group {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: table;
   width: 100%; }
   .phpimenta-ui-input-group .input-group-icon {
     position: absolute;
@@ -589,14 +587,16 @@ label {
     right: 0.5rem; }
   .phpimenta-ui-input-group.right-icon .phpimenta-ui-field {
     padding-right: 2rem; }
-  .phpimenta-ui-input-group .phpimenta-ui-field {
-    flex: 1 1 0%; }
   .phpimenta-ui-input-group .input-group-prepend {
-    display: flex;
-    margin-right: auto; }
+    display: table-cell;
+    margin-right: auto;
+    vertical-align: middle;
+    padding: 0.5rem; }
   .phpimenta-ui-input-group .input-group-append {
-    display: flex;
-    margin-left: auto; }
+    display: table-cell;
+    margin-left: auto;
+    vertical-align: middle;
+    padding: 0.5rem; }
 
 h1,
 .h1,
