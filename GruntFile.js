@@ -38,10 +38,26 @@ module.exports = function (grunt) {
                 presets: ['@babel/preset-env']
             },
             dist: {
-                files: {
-                    'dist/js/phpimenta-ui.js': 'src/js/phpimenta-ui.js'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'src/js',
+                    src: ['**/*.js'],
+                    dest: 'src/out',
+                    ext: '.js'
+                }]
             }
+        },
+        concat: {
+            dist: {
+                src: [
+                    'src/out/header.js',
+                    'src/out/tab.js',
+                    'src/out/upload.js',
+                    'src/out/modal.js',
+                    'src/out/datepicker.js'
+                ],
+                dest: 'dist/js/phpimenta-ui-framework.js',
+            },
         },
         uglify: {
             my_target: {
@@ -54,13 +70,23 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'src/img',
+                src: '**',
+                dest: 'dist/img',
+            },
+        },
     });
 
-    grunt.registerTask('default', ['clean', 'sass', 'cssmin', 'babel', 'uglify']);
+    grunt.registerTask('default', ['clean', 'sass', 'cssmin', 'babel', 'concat', 'uglify', 'copy']);
 
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 };

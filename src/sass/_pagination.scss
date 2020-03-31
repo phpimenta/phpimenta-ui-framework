@@ -1,0 +1,24 @@
+.phpimenta-ui-pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .page-item {
+        padding-bottom: 1rem;
+        & + .page-item {
+            margin-left: .5rem;
+        }
+        &.disabled {
+            .page-link {
+                pointer-events: none;
+                color: #6c757d;
+            }
+        }
+        .page-link {
+            border: 1px solid #c8c8c8;
+            padding: .375rem .75rem;
+            &:hover {
+                background-color: #f2f2f2;
+            }
+        }
+    }
+}

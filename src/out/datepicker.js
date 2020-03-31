@@ -6,95 +6,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-/**
- * --------------------------------------------------------------------------
- * Phpimenta UI Framework (v0.2.1)
- * Copyright 2020-2020 Phpimenta Software e Consultoria
- * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
-var files = document.querySelectorAll('.phpimenta-ui-upload input[type=file]');
-files.forEach(function (file) {
-  file.addEventListener('change', function (event) {
-    var files = [];
-    Array.from(this.files).forEach(function (file) {
-      files.push(' ' + file.name);
-    });
-    var label;
-    Array.from(this.parentElement.children).forEach(function (node) {
-      if (node.nodeName == "LABEL") {
-        label = node;
-      }
-    });
-    label.innerHTML = files.toString();
-  });
-});
-var modals = document.querySelectorAll('.phpimenta-ui-modal');
-modals.forEach(function (modal, index) {
-  var elements = modal.children[0].children[0].children;
-  var total = elements.length;
-
-  for (var i = 0; i < total; i++) {
-    var element = elements[i];
-
-    if (element.classList.value == 'btn-close') {
-      element.addEventListener('click', function () {
-        window.modal('#' + modal.id, 'hide');
-      });
-    }
-  }
-});
-var dropdownTriggers = document.querySelectorAll('.phpimenta-dropdown-trigger');
-dropdownTriggers.forEach(function (trigger) {
-  trigger.addEventListener('click', function (event) {
-    event.preventDefault();
-    var dropdownMenu = document.getElementById(this.dataset.toggle);
-    var display = window.getComputedStyle(dropdownMenu).getPropertyValue('display');
-
-    if (display == 'none') {
-      dropdownMenu.style.display = 'block';
-    } else {
-      dropdownMenu.style.display = 'none';
-    }
-  });
-});
-window.addEventListener('click', function (event) {
-  if (event.target.classList.value == 'phpimenta-ui-modal') {
-    event.target.style.display = 'none';
-  }
-
-  dropdownTriggers.forEach(function (trigger) {
-    var dropdownMenu = document.getElementById(trigger.dataset.toggle);
-    var display = window.getComputedStyle(dropdownMenu).getPropertyValue('display');
-
-    if (trigger.dataset.toggle !== event.target.dataset.toggle) {
-      if (display == 'block') {
-        dropdownMenu.style.display = 'none';
-      }
-    }
-  });
-});
-var toggles = document.querySelectorAll('button[data-toggle=modal]');
-toggles.forEach(function (toggle) {
-  toggle.addEventListener('click', function () {
-    var target = toggle.dataset.target;
-    modal(target, 'show');
-  });
-});
-
-window.modal = function (target, event) {
-  var modal = document.querySelector(target);
-
-  if (modal != null && event == 'show') {
-    modal.style.display = 'block';
-  } else if (modal != null && event == 'hide') {
-    modal.style.display = 'none';
-  }
-};
-
-var Datepicker =
-/*#__PURE__*/
-function () {
+var Datepicker = /*#__PURE__*/function () {
   function Datepicker() {
     _classCallCheck(this, Datepicker);
 
@@ -322,4 +234,4 @@ datepicker.enable();
 window.phpimenta_datepicker = function (input) {
   datepicker.create(input);
 };
-//# sourceMappingURL=phpimenta-ui.js.map
+//# sourceMappingURL=datepicker.js.map

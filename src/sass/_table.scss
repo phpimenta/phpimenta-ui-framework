@@ -1,0 +1,61 @@
+.phpimenta-ui-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #c8c8c8;
+  width: 100%;
+  margin-bottom: 1rem;
+  caption {
+    padding: 0.5em 1em;
+    font-weight: bold;
+  }
+  th,
+  td {
+    border: 1px solid #c8c8c8;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: 0.5em 1em;
+  }
+  thead {
+    background-color: #f2f2f2;
+    color: #000;
+    display: none;
+    @media(min-width: $large-min-width) {
+      display: table-header-group;
+    }
+    text-align: center;
+    vertical-align: bottom;
+    th {
+      font-weight: bold;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: .5rem solid #ffffff;
+      @media(min-width: $large-min-width) {
+        border-bottom: 0px;
+      }
+      td {
+        &:before {
+          color: #999;
+          content: attr(data-heading);
+          display: inline-block;
+          font-weight: bold;
+          font-size: .9rem;
+          width: 5rem;
+          text-transform: uppercase;
+          margin-right: .5rem;
+          text-align: right;
+        }
+        display: block;
+        @media(min-width: $large-min-width) {
+          display: table-cell;
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.phpimenta-ui-nav {
+  position: relative;
+  .nav-item {
+    display: inline-block;
+    z-index: 1051;
+    .nav-link {
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+    border: 1px solid transparent;
+  }
+  &.vertical-nav {
+    .nav-item {
+      display: block;
+    }
+  }
+}

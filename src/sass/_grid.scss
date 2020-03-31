@@ -1,0 +1,152 @@
+.phpimenta-ui-grid {
+  display: block;
+  flex-wrap: wrap;
+  .column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+    width: 100%;
+  }
+  &.small {
+    @media screen and (min-width: $small-min-width) {
+      display: flex;
+      .column {
+        &.is-full {
+          flex: none;
+          width: $column-width-is-full;
+        }
+        &.is-three-quarters {
+          flex: none;
+          width: $column-width-is-three-quarters;
+        }
+        &.is-two-thirds {
+          flex: none;
+          width: $column-width-is-two-thirds;
+        }
+        &.is-half {
+          flex: none;
+          width: $column-width-is-half;
+        }
+        &.is-one-third {
+          flex: none;
+          width: $column-width-is-one-third;
+        }
+        &.is-one-quarter {
+          flex: none;
+          width: $column-width-is-one-quarter;
+        }
+        &.is-one-fifth {
+          flex: none;
+          width: $column-width-is-one-fifth;
+        }
+      }
+    }
+  }
+  &.medium {
+    @media screen and (min-width: $medium-min-width) {
+      display: flex;
+      .column {
+        &.is-full {
+          flex: none;
+          width: $column-width-is-full;
+        }
+        &.is-three-quarters {
+          flex: none;
+          width: $column-width-is-three-quarters;
+        }
+        &.is-two-thirds {
+          flex: none;
+          width: $column-width-is-two-thirds;
+        }
+        &.is-half {
+          flex: none;
+          width: $column-width-is-half;
+        }
+        &.is-one-third {
+          flex: none;
+          width: $column-width-is-one-third;
+        }
+        &.is-one-quarter {
+          flex: none;
+          width: $column-width-is-one-quarter;
+        }
+        &.is-one-fifth {
+          flex: none;
+          width: $column-width-is-one-fifth;
+        }
+      }
+    }
+  }
+  &.large {
+    @media screen and (min-width: $large-min-width) {
+      display: flex;
+      .column {
+        &.is-full {
+          flex: none;
+          width: $column-width-is-full;
+        }
+        &.is-three-quarters {
+          flex: none;
+          width: $column-width-is-three-quarters;
+        }
+        &.is-two-thirds {
+          flex: none;
+          width: $column-width-is-two-thirds;
+        }
+        &.is-half {
+          flex: none;
+          width: $column-width-is-half;
+        }
+        &.is-one-third {
+          flex: none;
+          width: $column-width-is-one-third;
+        }
+        &.is-one-quarter {
+          flex: none;
+          width: $column-width-is-one-quarter;
+        }
+        &.is-one-fifth {
+          flex: none;
+          width: $column-width-is-one-fifth;
+        }
+      }
+    }
+  }
+  &.extra-large {
+    @media screen and (min-width: $extra-large-min-width) {
+      display: flex;
+      .column {
+        &.is-full {
+          flex: none;
+          width: $column-width-is-full;
+        }
+        &.is-three-quarters {
+          flex: none;
+          width: $column-width-is-three-quarters;
+        }
+        &.is-two-thirds {
+          flex: none;
+          width: $column-width-is-two-thirds;
+        }
+        &.is-half {
+          flex: none;
+          width: $column-width-is-half;
+        }
+        &.is-one-third {
+          flex: none;
+          width: $column-width-is-one-third;
+        }
+        &.is-one-quarter {
+          flex: none;
+          width: $column-width-is-one-quarter;
+        }
+        &.is-one-fifth {
+          flex: none;
+          width: $column-width-is-one-fifth;
+        }
+      }
+    }
+  }
+}

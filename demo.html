@@ -5,16 +5,32 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Phpimenta UI Framework</title>
-  <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.2.1/dist/css/phpimenta-ui.min.css"
-    crossorigin>
+  <title>Phpimenta UI Framework ..::.. from programmer to programmers ..::..</title>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.2.1/dist/css/phpimenta-ui.min.css"
+    crossorigin> -->
+  <link rel="stylesheet" href="dist/css/phpimenta-ui-framework.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
     integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
+
+    .logo-wrapper {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-wrapper .logo {
+      font-family: 'Comic Neue', cursive;
+    }
 
     section {
       margin-bottom: 1rem !important;
+    }
+
+    section .title {
+      border-bottom: 1px solid #cccccc;
+      margin-bottom: 1rem;
     }
 
     div.code {
@@ -27,91 +43,85 @@
   </style>
 </head>
 
-<body class="container">
+<body class="phpimenta-ui-container">
+  <div class="logo-wrapper">
+    <h1 class="logo">Phpimenta UI Framework</h1>
+    <p>..::.. from programmer to programmers ..::..</p>
+    <small>Versão: 0.2.2</small>
+  </div>
   <section>
-    <h2>Navs</h2>
-    <h3>Horizontal</h3>
-    <nav>
-      <ul class="phpimenta-ui-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="phpimenta-dropdown-trigger" data-toggle="dropdownExampleNavMenu">DropDown Nav Menu</a>
-          <div class="phpimenta-dropdown-content" id="dropdownExampleNavMenu">
-            <a href="" class="dropdown-item">Sub-link 1</a>
-            <a href="" class="dropdown-item">Sub-link 1</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <br>
-    <h3>Vertical</h3>
-    <nav>
-      <ul class="phpimenta-ui-nav vertical-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
-    </nav>
+    <h2 class="title">Buttons</h2>
+    <button type="button" class="phpimenta-ui-button">Base Button</button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-primary">
+      Primary Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-success">
+      Success Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-danger">
+      Danger Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-warning">
+      Warning Button
+    </button>
   </section>
 
-  <section>
-    <h2>Datepicker</h2>
-
-    <div class="phpimenta-ui-field-wrapper">
-      <label>Datepicker</label>
-      <input type="text" class="phpimenta-ui-field" id="datepicker_example"
-        onclick="phpimenta_datepicker('#datepicker_example')">
+  <section class="card">
+    <h2 class="title">Card</h2>
+    <div class="phpimenta-ui-card">
+      <div class="phpimenta-ui-card-header">
+        Header
+      </div>
+      <div class="phpimenta-ui-card-body">
+        This is an example text of the card body.
+      </div>
+      <div class="phpimenta-ui-card-footer">
+        Footer
+      </div>
     </div>
+  </section>
 
-    <div class="phpimenta-ui-field-wrapper">
-      <label>Datepicker icon</label>
-      <div class="phpimenta-ui-input-group">
-        <input type="text" class="phpimenta-ui-field" id="datepicker_example2">
-        <div class="input-group-append">
-          <button type="button" class="phpimenta-ui-button" onclick="phpimenta_datepicker('#datepicker_example2')">Open
-            calendar</button>
+  <section class="card">
+    <h2 class="title">Card groups</h2>
+    <div class="phpimenta-ui-card-group">
+      <div class="phpimenta-ui-card">
+        <div class="phpimenta-ui-card-body">
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+          This is an example text of the card body.<br>
+        </div>
+      </div>
+
+      <div class="phpimenta-ui-card">
+        <div class="phpimenta-ui-card-body">
+          This is an example text of the card body.
+        </div>
+      </div>
+
+      <div class="phpimenta-ui-card">
+        <div class="phpimenta-ui-card-body">
+          This is an example text of the card body.
         </div>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Dropdowns</h2>
-    <button class="phpimenta-ui-button phpimenta-dropdown-trigger" data-toggle="dropdownExample2">DropDown 2</button>
-    <div class="phpimenta-dropdown-content" id="dropdownExample2">
-      <a href="" class="dropdown-item">Sub-link 1</a>
-      <a href="" class="dropdown-item">Sub-link 1</a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Forms</h2>
+    <h2 class="title">Form</h2>
 
     <div class="phpimenta-ui-field-wrapper">
-      <label>Input</label>
-      <input type="text" class="phpimenta-ui-field">
+      <label for="text_input_example">Text input example</label>
+      <input type="text" id="text_input_example" class="phpimenta-ui-field" />
     </div>
 
-    <div class="phpimenta-ui-field-wrapper">
-      <label>Input Group</label>
-      <div class="phpimenta-ui-input-group">
-        <div class="input-group-preppend">
-          http://www.
-        </div>
-        <input type="text" class="phpimenta-ui-field">
-        <div class="input-group-append">
-          .com
-        </div>
-      </div>
-    </div>
+    <h4>Input group</h4>
 
     <div class="phpimenta-ui-field-wrapper">
       <label>Input group left icon</label>
@@ -134,12 +144,89 @@
     </div>
 
     <div class="phpimenta-ui-field-wrapper">
-      <label>Select</label>
-      <select class="phpimenta-ui-field">
-      </select>
+      <label>Input group text</label>
+      <div class="phpimenta-ui-input-group">
+        <span class="input-group-text">http://www.</span>
+        <input type="text" class="phpimenta-ui-field" id="datepicker_example2">
+        <span class="input-group-text">.com</span>
+      </div>
     </div>
 
-    <h3>Upload</h3>
+    <div class="phpimenta-ui-field-wrapper">
+      <label for="input_group_button">Input group button</label>
+      <div class="phpimenta-ui-input-group">
+        <input type="text" class="phpimenta-ui-field" id="input_group_button">
+        <button type="button" class="phpimenta-ui-button">Enviar</button>
+      </div>
+    </div>
+
+    <h4>Datepickers</h4>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label for="datepicker">Datepicker</label>
+      <input type="text" class="phpimenta-ui-field" id="datepicker" onclick="phpimenta_datepicker('#datepicker')">
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <label for="datepicker_group">Datepicker input group</label>
+      <div class="phpimenta-ui-input-group">
+        <input type="text" class="phpimenta-ui-field" id="datepicker_group">
+        <button type="button" class="phpimenta-ui-button" onclick="phpimenta_datepicker('#datepicker_group')">Open
+          calendar</button>
+      </div>
+    </div>
+
+    <h4>Checkboxes</h4>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <div class="phpimenta-ui-checkbox">
+        <input type="checkbox" id="checkbox1" name="checkbox" />
+        <label for="checkbox1">Checkboxe 1</label>
+      </div>
+      <div class="phpimenta-ui-checkbox">
+        <input type="checkbox" id="checkbox2" name="checkbox" />
+        <label for="checkbox2">Checkboxe 2</label>
+      </div>
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <p>Inline</p>
+      <div class="phpimenta-ui-checkbox phpimenta-ui-checkbox-inline">
+        <input type="checkbox" id="checkbox3" name="checkbox" />
+        <label for="checkbox3">Checkboxe 3</label>
+      </div>
+      <div class="phpimenta-ui-checkbox phpimenta-ui-checkbox-inline">
+        <input type="checkbox" id="checkbox4" name="checkbox" />
+        <label for="checkbox4">Checkboxe 4</label>
+      </div>
+    </div>
+
+    <h4>Radios</h4>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <div class="phpimenta-ui-radio">
+        <input type="radio" id="radio1" name="radio" />
+        <label for="radio1">Radio 1</label>
+      </div>
+      <div class="phpimenta-ui-radio">
+        <input type="radio" id="radio2" name="radio" />
+        <label for="radio2">Radio 2</label>
+      </div>
+    </div>
+
+    <div class="phpimenta-ui-field-wrapper">
+      <p>Inline</p>
+      <div class="phpimenta-ui-radio phpimenta-ui-radio-inline">
+        <input type="radio" id="radio3" name="radio" />
+        <label for="radio3">Radio 3</label>
+      </div>
+      <div class="phpimenta-ui-radio phpimenta-ui-radio-inline">
+        <input type="radio" id="radio4" name="radio" />
+        <label for="radio4">Radio 4</label>
+      </div>
+    </div>
+
+    <h4>Upload</h4>
 
     <div class="phpimenta-ui-field-wrapper">
       <label>Single upload</label>
@@ -156,71 +243,50 @@
         <input type="file" multiple>
       </div>
     </div>
-
-    <h3>Radio</h3>
-
-    <div class="phpimenta-ui-field-wrapper">
-      <div class="phpimenta-ui-radio">
-        <input type="radio" id="radio1" name="radio" />
-        <label for="radio1">Radio 1</label>
-      </div>
-      <div class="phpimenta-ui-radio">
-        <input type="radio" id="radio2" name="radio" />
-        <label for="radio2">Radio 2</label>
-      </div>
-    </div>
-
-    <h4>Inline</h4>
-
-    <div class="phpimenta-ui-field-wrapper inline">
-      <div class="phpimenta-ui-radio">
-        <input type="radio" id="radio3" name="radio" />
-        <label for="radio3">Radio 3</label>
-      </div>
-      <div class="phpimenta-ui-radio">
-        <input type="radio" id="radio4" name="radio" />
-        <label for="radio4">Radio 4</label>
-      </div>
-    </div>
-
-    <h3>Checkboxes</h3>
-
-    <div class="phpimenta-ui-field-wrapper">
-      <div class="phpimenta-ui-checkboxe">
-        <input type="checkbox" id="checkboxe1" name="checkboxe" />
-        <label for="checkboxe1">Checkboxe 1</label>
-      </div>
-      <div class="phpimenta-ui-checkboxe">
-        <input type="checkbox" id="checkboxe2" name="checkboxe" />
-        <label for="checkboxe2">Checkboxe 2</label>
-      </div>
-    </div>
-
-    <h4>Inline</h4>
-
-    <div class="phpimenta-ui-field-wrapper inline">
-      <div class="phpimenta-ui-checkboxe">
-        <input type="checkbox" id="checkboxe3" name="checkboxe" />
-        <label for="checkboxe3">Checkboxe 3</label>
-      </div>
-      <div class="phpimenta-ui-checkboxe">
-        <input type="checkbox" id="checkboxe4" name="checkboxe" />
-        <label for="checkboxe4">Checkboxe 3</label>
-      </div>
-    </div>
-
-    <h3>Switches</h3>
-
-    <div class="phpimenta-ui-field-wrapper">
-      <div class="phpimenta-ui-switch">
-        <input type="checkbox" id="toggle" class="phpimenta-ui-checkbox" />
-        <label for="toggle">Toggle Switch</label>
-      </div>
-    </div>
   </section>
 
   <section>
-    <h2>Grid</h2>
+    <h2 class="title">Grid</h2>
+
+    <table class="phpimenta-ui-table">
+      <caption>Sizes</caption>
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Width</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>is-full</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <td>is-three-quarters</td>
+          <td>75%</td>
+        </tr>
+        <tr>
+          <td>is-two-thirds</td>
+          <td>66.6666%</td>
+        </tr>
+        <tr>
+          <td>is-half</td>
+          <td>50%</td>
+        </tr>
+        <tr>
+          <td>is-one-third</td>
+          <td>33.3333%</td>
+        </tr>
+        <tr>
+          <td>is-one-quarter</td>
+          <td>25%</td>
+        </tr>
+        <tr>
+          <td>is-one-fifth</td>
+          <td>20%</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h3>Small breakpoint</h3>
     <div class="phpimenta-ui-grid small">
@@ -269,102 +335,61 @@
     </div>
   </section>
 
-  <section class="card">
-    <h2>Card</h2>
-    <div class="phpimenta-ui-card">
-      <div class="phpimenta-ui-card-header">
-        Header
-      </div>
-      <div class="phpimenta-ui-card-body">
-        This is an example text of the card body.
-      </div>
-      <div class="phpimenta-ui-card-footer">
-        Footer
-      </div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Card groups</h2>
-    <div class="phpimenta-ui-card-group">
-      <div class="phpimenta-ui-card">
-        <div class="phpimenta-ui-card-body">
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-          This is an example text of the card body.<br>
-        </div>
-      </div>
-
-      <div class="phpimenta-ui-card">
-        <div class="phpimenta-ui-card-body">
-          This is an example text of the card body.
-        </div>
-      </div>
-
-      <div class="phpimenta-ui-card">
-        <div class="phpimenta-ui-card-body">
-          This is an example text of the card body.
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section>
-    <h2>Buttons</h2>
-    <button type="button" class="phpimenta-ui-button">Base Button</button>
-    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-primary">
-      Primary Button
-    </button>
-    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-success">
-      Success Button
-    </button>
-    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-error">
-      Error Button
-    </button>
-    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-warning">
-      Warning Button
-    </button>
-  </section>
+    <h2 class="title">Modal</h2>
 
-  <section>
-    <h2>Table</h2>
+    <button type="button" data-toggle="modal" data-target="#exampleModal" class="phpimenta-ui-button">
+      Open Modal
+    </button>
+    <br><br>
+
+    <h4>Via Javascript:</h4>
+
+    <p>call a modal via JavaScript:</p>
+
+    <div class="code">
+      modal('id', 'options');
+    </div>
+
     <table class="phpimenta-ui-table">
+      <caption>Options</caption>
       <thead>
         <tr>
-          <th>#</th>
-          <th>Make</th>
-          <th>Model</th>
+          <th>Name</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td>Honda</td>
-          <td>Honda Civic</td>
+          <td>Show</td>
+          <td>Show modal window</td>
         </tr>
         <tr>
-          <td>2</td>
-          <td>Toyota Motor</td>
-          <td>Toyota Corolla</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Hyundai</td>
-          <td>Hyundai HB20</td>
+          <td>Hide</td>
+          <td>Hide modal window</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="phpimenta-ui-modal" id="exampleModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Modal Header</h3>
+          <span class="btn-close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+          <p>Modal Footer</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section>
-    <h2>Pagination</h2>
+    <h2 class="title">Pagination</h2>
 
     <nav>
       <ul class="phpimenta-ui-pagination">
@@ -388,59 +413,75 @@
   </section>
 
   <section>
-    <h2>Modal</h2>
-
-    <button type="button" data-toggle="modal" data-target="#exampleModal" class="phpimenta-ui-button">
-      Open Modal
-    </button>
-    <br><br>
-
-    <h3>Via Javascript:</h3>
-
-    <p>call a modal via JavaScript:</p>
-
-    <div class="code">
-      modal('id', 'options');
-    </div>
+    <h2 class="title">Responsive table</h2>
 
     <table class="phpimenta-ui-table">
-      <caption>Options</caption>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Description</th>
+          <th>#</th>
+          <th>Make</th>
+          <th>Model</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Show</td>
-          <td></td>
+          <td>1</td>
+          <td data-heading="Make">Honda</td>
+          <td data-heading="Model">Honda Civic</td>
         </tr>
         <tr>
-          <td>Hide</td>
-          <td></td>
+          <td>2</td>
+          <td data-heading="Make">Toyota Motor</td>
+          <td data-heading="Model">Toyota Corolla</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td data-heading="Make">Hyundai</td>
+          <td data-heading="Model">Hyundai HB20</td>
         </tr>
       </tbody>
     </table>
+  </section>
 
-    <div class="phpimenta-ui-modal" id="exampleModal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">Modal Header</h3>
-          <h3 class="modal-title">Modal Header</h3>
-          <span class="btn-close">&times;</span>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the Modal Body</p>
-          <p>Some other text...</p>
-        </div>
-        <div class="modal-footer">
-          <h3>Modal Footer</h3>
-        </div>
+  <section>
+    <h2 class="title">Tabs</h2>
+
+    <ul class="phpimenta-ui-nav phpimenta-ui-tabs">
+      <li class="nav-item active"><a class="nav-link" href="#brazil">Brasilia</a></li>
+      <li class="nav-item"><a class="nav-link" href="#usa">Washington</a></li>
+      <li class="nav-item"><a class="nav-link" href="#cuba">Havana</a></li>
+    </ul>
+    <div class="phpimenta-ui-tab-content">
+      <div id="brazil">
+        <p>Brasilia is the capital of Brazil.</p>
+      </div>
+      <div id="usa">
+        <p>Washington is the capital of USA.</p>
+      </div>
+      <div id="cuba">
+        <p>Havana is the capital of Cuba.</p>
+      </div>
+    </div>
+    <br />
+    <ul class="phpimenta-ui-nav phpimenta-ui-tabs">
+      <li class="nav-item active"><a class="nav-link" href="#windows">Microsoft</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ios">Apple</a></li>
+      <li class="nav-item"><a class="nav-link" href="#android">Google</a></li>
+    </ul>
+    <div class="phpimenta-ui-tab-content">
+      <div id="windows">
+        <p>Windows is a Microsoft system</p>
+      </div>
+      <div id="ios">
+        <p>IOS is a Apple system</p>
+      </div>
+      <div id="android">
+        <p>Android is a Google system</p>
       </div>
     </div>
   </section>
-  <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.2.1/dist/js/phpimenta-ui.min.js"></script>
+  <!-- <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.2.1/dist/js/phpimenta-ui.min.js"></script> -->
+  <script src="dist/js/phpimenta-ui-framework.js"></script>
 </body>
 
 </html>

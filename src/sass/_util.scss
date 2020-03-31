@@ -1,0 +1,47 @@
+.phpimenta-ui-container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .phpimenta-ui-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .phpimenta-ui-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .phpimenta-ui-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .phpimenta-ui-container {
+    max-width: 1140px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.margin-right-auto {
+  margin-right: auto;
+}

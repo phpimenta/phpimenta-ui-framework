@@ -31,8 +31,9 @@
       border: 0px;
       caption {
         font-weight: normal;
+        padding: 0.5em 0em;
         button {
-          margin: 0rem 0.25rem;
+          margin: 0 .25rem;
           padding: 0.375rem 0.5rem;
           background-color: transparent;
           border: 0px;
@@ -44,7 +45,7 @@
           float: left;
           span {
             display: inline-block;
-            width: 60px;
+            width: 80px;
           }
         }
         .header-year {

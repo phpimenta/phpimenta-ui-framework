@@ -1,0 +1,20 @@
+.phpimenta-ui-tabs {
+    .nav-item {
+      &.active {
+        border: 1px solid #c8c8c8;
+        border-bottom: 0px;
+      }
+      &:hover {
+        border: 1px solid #c8c8c8;
+        border-bottom: 0px;
+      }
+    }
+  }
+  
+  .phpimenta-ui-tab-content {
+    border: 1px solid #c8c8c8;
+    margin-top: -1px;
+    margin-bottom: 1rem;
+    min-height: 4rem;
+    padding: 0.75rem;
+  }

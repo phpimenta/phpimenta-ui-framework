@@ -1,0 +1,39 @@
+/*!
+* Phpimenta UI Framework v0.2.2
+* Copyright 2020-2020 Phpimenta Software e Consultoria
+* Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import "_reset.scss";
+
+@import "_variables.scss";
+
+@import "_typography.scss";
+
+@import "_util.scss";
+
+@import "_pagination.scss";
+
+@import "_datepicker.scss";
+
+@import "_tags.scss";
+
+@import "_navs.scss";
+
+@import "_grid.scss";
+
+@import "_card.scss";
+
+@import "_table.scss";
+
+@import "_form.scss";
+
+@import "_modal.scss";
+
+@import "_tabs.scss";
