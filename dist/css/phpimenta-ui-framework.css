@@ -1,5 +1,5 @@
 /*!
-* Phpimenta UI Framework v0.2.2
+* Phpimenta UI Framework v0.2.3
 * Copyright 2020-2020 Phpimenta Software e Consultoria
 * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
 */
@@ -659,7 +659,6 @@ p {
       padding: 0.75rem; }
     .phpimenta-ui-modal .modal-content .modal-footer {
       padding: 0.75rem;
-      margin-bottom: 0;
       border-top: 1px solid #cccccc; }
 
 .phpimenta-ui-tabs .nav-item.active {
