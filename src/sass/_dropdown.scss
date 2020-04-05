@@ -1,0 +1,35 @@
+.phpimenta-ui-dropdown {
+  position: relative;
+  .dropdown-toggle {
+    &:after {
+      content: '\2023';
+      display: inline-block;
+      width: 15px;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+  .phpimenta-ui-dropdown-content {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    display: none;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    width: 100%;
+    a.dropdown-item {
+      color: $primary-text-color;
+      padding: .25rem .5rem;
+      line-height: 1.5;
+      display: block;
+      overflow-wrap: break-word;
+      &:hover {
+        background-color: #F2F2F2;
+      }
+    }
+  }
+}

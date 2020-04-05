@@ -1,11 +1,10 @@
 .phpimenta-ui-pagination {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     .page-item {
-        padding-bottom: 1rem;
+        margin-bottom: 1rem;
         & + .page-item {
-            margin-left: .5rem;
+            margin-left: .25rem;
         }
         &.disabled {
             .page-link {
@@ -14,6 +13,7 @@
             }
         }
         .page-link {
+            display: inline-block;
             border: 1px solid #c8c8c8;
             padding: .375rem .75rem;
             &:hover {

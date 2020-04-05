@@ -6,10 +6,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Phpimenta UI Framework ..::.. from programmer to programmers ..::..</title>
-  <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.2.4/dist/css/phpimenta-ui-framework.min.css"
-    crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/phpimenta-ui-framework@0.2.5/dist/css/phpimenta-ui-framework.min.css"
+  crossorigin>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
-    integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+  integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
@@ -46,13 +46,18 @@
   <div class="logo-wrapper">
     <h1 class="logo">Phpimenta UI Framework</h1>
     <p>..::.. from programmer to programmers ..::..</p>
-    <small>Versão: 0.2.4</small>
+    <small>Versão: 0.2.5</small>
   </div>
   <section>
     <h2 class="title">Buttons</h2>
-    <button type="button" class="phpimenta-ui-button">Base Button</button>
+    <button type="button" class="phpimenta-ui-button">
+      Base Button
+    </button>
     <button type="button" class="phpimenta-ui-button phpimenta-ui-button-primary">
       Primary Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-secondary">
+      Secondary Button
     </button>
     <button type="button" class="phpimenta-ui-button phpimenta-ui-button-success">
       Success Button
@@ -61,6 +66,26 @@
       Danger Button
     </button>
     <button type="button" class="phpimenta-ui-button phpimenta-ui-button-warning">
+      Warning Button
+    </button>
+    <br/ > <br/ >
+    <h4>Small Button</h4>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-small-button">
+      Base Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-primary phpimenta-ui-small-button">
+      Primary Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-secondary phpimenta-ui-small-button">
+      Secondary Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-success phpimenta-ui-small-button">
+      Success Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-danger phpimenta-ui-small-button">
+      Danger Button
+    </button>
+    <button type="button" class="phpimenta-ui-button phpimenta-ui-button-warning phpimenta-ui-small-button">
       Warning Button
     </button>
   </section>
@@ -108,6 +133,31 @@
         <div class="phpimenta-ui-card-body">
           This is an example text of the card body.
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Dropdowns</h2>
+    <div class="phpimenta-ui-dropdown">
+      <button type="button" class="phpimenta-ui-button dropdown-toggle">
+        Dropdown 1
+      </button>
+      <div class="phpimenta-ui-dropdown-content">
+        <a href="" class="dropdown-item">Link 1</a>
+        <a href="" class="dropdown-item">Link 2</a>
+        <a href="" class="dropdown-item">Link 3</a>
+      </div>
+    </div>
+    <br/>
+    <div class="phpimenta-ui-dropdown">
+      <a href="" class="dropdown-toggle">
+        Dropdown link
+      </a>
+      <div class="phpimenta-ui-dropdown-content">
+        <a href="" class="dropdown-item">Link 1</a>
+        <a href="" class="dropdown-item">Link 2</a>
+        <a href="" class="dropdown-item">Link 3</a>
       </div>
     </div>
   </section>
@@ -171,7 +221,7 @@
       <div class="phpimenta-ui-input-group">
         <input type="text" class="phpimenta-ui-field" id="datepicker_group">
         <button type="button" class="phpimenta-ui-button" onclick="phpimenta_datepicker('#datepicker_group')">Open
-          calendar</button>
+        calendar</button>
       </div>
     </div>
 
@@ -391,95 +441,86 @@
     <h2 class="title">Pagination</h2>
 
     <nav>
-      <ul class="phpimenta-ui-pagination">
-        <li class="page-item">
-          <a class="page-link" href="#">Previous</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item disabled">
-          <a class="page-link" href="#">disabled</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">Next</a>
-        </li>
-      </ul>
-    </nav>
-  </section>
-
-  <section>
-    <h2 class="title">Responsive table</h2>
-
-    <table class="phpimenta-ui-table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Make</th>
-          <th>Model</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td data-heading="Make">Honda</td>
-          <td data-heading="Model">Honda Civic</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td data-heading="Make">Toyota Motor</td>
-          <td data-heading="Model">Toyota Corolla</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td data-heading="Make">Hyundai</td>
-          <td data-heading="Model">Hyundai HB20</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2 class="title">Tabs</h2>
-
-    <ul class="phpimenta-ui-nav phpimenta-ui-tabs">
-      <li class="nav-item active"><a class="nav-link" href="#brazil">Brasilia</a></li>
-      <li class="nav-item"><a class="nav-link" href="#usa">Washington</a></li>
-      <li class="nav-item"><a class="nav-link" href="#cuba">Havana</a></li>
+     <ul class="phpimenta-ui-pagination">
+      <li class="page-item disabled"><a class="page-link" href="#">&laquo; Primeiro</a></li>
+      <li class="page-item"><a class="page-link" href="#">&lsaquo; Anterior</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">Próximo &rsaquo;</a></li>
+      <li class="page-item"><a class="page-link" href="#">Último &raquo;</a></li>
     </ul>
-    <div class="phpimenta-ui-tab-content">
-      <div id="brazil">
-        <p>Brasilia is the capital of Brazil.</p>
-      </div>
-      <div id="usa">
-        <p>Washington is the capital of USA.</p>
-      </div>
-      <div id="cuba">
-        <p>Havana is the capital of Cuba.</p>
-      </div>
+  </nav>
+</section>
+
+<section>
+  <h2 class="title">Responsive table</h2>
+
+  <table class="phpimenta-ui-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Make</th>
+        <th>Model</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td data-heading="Make">Honda</td>
+        <td data-heading="Model">Honda Civic</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td data-heading="Make">Toyota Motor</td>
+        <td data-heading="Model">Toyota Corolla</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td data-heading="Make">Hyundai</td>
+        <td data-heading="Model">Hyundai HB20</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 class="title">Tabs</h2>
+
+  <ul class="phpimenta-ui-nav phpimenta-ui-tabs">
+    <li class="nav-item"><a class="nav-link" href="#brazil">Brasilia</a></li>
+    <li class="nav-item active"><a class="nav-link" href="#usa">Washington</a></li>
+    <li class="nav-item"><a class="nav-link" href="#cuba">Havana</a></li>
+  </ul>
+  <div class="phpimenta-ui-tab-content">
+    <div id="brazil">
+      <p>Brasilia is the capital of Brazil.</p>
     </div>
-    <br />
-    <ul class="phpimenta-ui-nav phpimenta-ui-tabs">
-      <li class="nav-item active"><a class="nav-link" href="#windows">Microsoft</a></li>
-      <li class="nav-item"><a class="nav-link" href="#ios">Apple</a></li>
-      <li class="nav-item"><a class="nav-link" href="#android">Google</a></li>
-    </ul>
-    <div class="phpimenta-ui-tab-content">
-      <div id="windows">
-        <p>Windows is a Microsoft system</p>
-      </div>
-      <div id="ios">
-        <p>IOS is a Apple system</p>
-      </div>
-      <div id="android">
-        <p>Android is a Google system</p>
-      </div>
+    <div id="usa">
+      <p>Washington is the capital of USA.</p>
     </div>
-  </section>
-  <script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.2.4/dist/js/phpimenta-ui-framework.js"></script>
+    <div id="cuba">
+      <p>Havana is the capital of Cuba.</p>
+    </div>
+  </div>
+  <br />
+  <ul class="phpimenta-ui-nav phpimenta-ui-tabs">
+    <li class="nav-item active"><a class="nav-link" href="#windows">Microsoft</a></li>
+    <li class="nav-item"><a class="nav-link" href="#ios">Apple</a></li>
+    <li class="nav-item"><a class="nav-link" href="#android">Google</a></li>
+  </ul>
+  <div class="phpimenta-ui-tab-content">
+    <div id="windows">
+      <p>Windows is a Microsoft system</p>
+    </div>
+    <div id="ios">
+      <p>IOS is a Apple system</p>
+    </div>
+    <div id="android">
+      <p>Android is a Google system</p>
+    </div>
+  </div>
+</section>
+<script crossorigin src="https://unpkg.com/phpimenta-ui-framework@0.2.5/dist/js/phpimenta-ui-framework.js"></script>
 </body>
 
 </html>

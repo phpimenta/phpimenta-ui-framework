@@ -52,6 +52,7 @@ module.exports = function (grunt) {
                 src: [
                     'src/out/header.js',
                     'src/out/tab.js',
+                    'src/out/dropdown.js',
                     'src/out/upload.js',
                     'src/out/modal.js',
                     'src/out/datepicker.js'

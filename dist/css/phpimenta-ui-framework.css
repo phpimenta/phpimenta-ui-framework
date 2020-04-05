@@ -1,5 +1,5 @@
 /*!
-* Phpimenta UI Framework v0.2.4
+* Phpimenta UI Framework v0.2.5
 * Copyright 2020-2020 Phpimenta Software e Consultoria
 * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
 */
@@ -124,16 +124,16 @@ h6 {
 
 .phpimenta-ui-pagination {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap; }
   .phpimenta-ui-pagination .page-item {
-    padding-bottom: 1rem; }
+    margin-bottom: 1rem; }
     .phpimenta-ui-pagination .page-item + .page-item {
-      margin-left: .5rem; }
+      margin-left: .25rem; }
     .phpimenta-ui-pagination .page-item.disabled .page-link {
       pointer-events: none;
       color: #6c757d; }
     .phpimenta-ui-pagination .page-item .page-link {
+      display: inline-block;
       border: 1px solid #c8c8c8;
       padding: .375rem .75rem; }
       .phpimenta-ui-pagination .page-item .page-link:hover {
@@ -200,6 +200,35 @@ h6 {
         cursor: pointer; }
         .phpimenta-ui-datepicker-modal .phpimenta-ui-datepicker-modal-content .phpimenta-ui-table tbody tr td.current-date {
           background-color: #e0e0e0; }
+
+.phpimenta-ui-dropdown {
+  position: relative; }
+  .phpimenta-ui-dropdown .dropdown-toggle:after {
+    content: '\2023';
+    display: inline-block;
+    width: 15px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .phpimenta-ui-dropdown .phpimenta-ui-dropdown-content {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    display: none;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    width: 100%; }
+    .phpimenta-ui-dropdown .phpimenta-ui-dropdown-content a.dropdown-item {
+      color: #212121;
+      padding: .25rem .5rem;
+      line-height: 1.5;
+      display: block;
+      overflow-wrap: break-word; }
+      .phpimenta-ui-dropdown .phpimenta-ui-dropdown-content a.dropdown-item:hover {
+        background-color: #F2F2F2; }
 
 p {
   margin-top: 0;
@@ -384,7 +413,6 @@ p {
     padding: 0.5em 1em; }
   .phpimenta-ui-table thead {
     background-color: #f2f2f2;
-    color: #000;
     display: none;
     text-align: center;
     vertical-align: bottom; }
@@ -438,18 +466,19 @@ p {
   padding: 0.375rem 0.75rem;
   background-color: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
-  border: 1px solid #999;
   border: none transparent;
   cursor: pointer;
   line-height: 1.5;
   font-size: 1rem;
   display: inline-block; }
-  .phpimenta-ui-button.phpimenta-ui-button-small {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5; }
+  .phpimenta-ui-button.phpimenta-ui-small-button {
+    padding: .25rem .5rem;
+    font-size: .875rem; }
   .phpimenta-ui-button.phpimenta-ui-button-primary {
     background-color: #0078e7;
+    color: #ffffff; }
+  .phpimenta-ui-button.phpimenta-ui-button-secondary {
+    background-color: #42b8dd;
     color: #ffffff; }
   .phpimenta-ui-button.phpimenta-ui-button-success {
     background: #1cb841;

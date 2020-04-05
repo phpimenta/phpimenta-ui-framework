@@ -24,19 +24,21 @@
   padding: 0.375rem 0.75rem;
   background-color: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
-  border: 1px solid #999;
   border: none transparent;
   cursor: pointer;
   line-height: 1.5;
   font-size: 1rem;
   display: inline-block;
-  &.phpimenta-ui-button-small {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
+  &.phpimenta-ui-small-button {
+    padding: .25rem .5rem;
+    font-size: .875rem;
   }
   &.phpimenta-ui-button-primary {
     background-color: #0078e7;
+    color: #ffffff;
+  }
+  &.phpimenta-ui-button-secondary {
+    background-color: #42b8dd;
     color: #ffffff;
   }
   &.phpimenta-ui-button-success {
