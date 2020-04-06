@@ -1,5 +1,5 @@
 /*!
-* Phpimenta UI Framework v0.2.5
+* Phpimenta UI Framework v0.2.6
 * Copyright 2020-2020 Phpimenta Software e Consultoria
 * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
 */
@@ -87,65 +87,55 @@ var Dropdown = /*#__PURE__*/function () {
   function Dropdown() {
     _classCallCheck(this, Dropdown);
 
-    this.counter = 0;
+    this.previousContentId;
+    this.currentContentId;
   }
 
   _createClass(Dropdown, [{
     key: "enable",
     value: function enable() {
+      var _this = this;
+
       var self = this;
       window.addEventListener('click', function (event) {
-        if (event.target.classList.value.split(' ').indexOf('dropdown-toggle') == -1) {
-          self.hideContent();
+        if (event.target.classList.value != 'phpimenta-ui-dropdown') {
+          var contents = document.querySelectorAll('.phpimenta-ui-dropdown-content');
+          contents.forEach(function (content) {
+            document.getElementById(content.id).style.display = 'none';
+          });
         }
       });
-      var dropdowns = document.querySelectorAll('.phpimenta-ui-dropdown');
-      dropdowns.forEach(function (dropdown) {
-        Array.from(dropdown.children).forEach(function (children) {
-          if (children.classList.toString().split('dropdown-toggle')) {
-            children.addEventListener('click', function (event) {
-              event.preventDefault();
-              self.hideContent(event.target.dataset.index);
-              var content = self.getContent(event.target);
-              var display = window.getComputedStyle(content).getPropertyValue('display');
-
-              if (event.target.dataset.index == undefined) {
-                event.target.dataset.index = self.counter;
-                content.dataset.index = self.counter;
-                self.counter++;
-              }
-
-              if (display == 'none') {
-                content.style.display = 'block';
-              } else {
-                content.style.display = 'none';
-              }
-            });
-          }
+      var toggles = document.querySelectorAll('.dropdown-toggle');
+      toggles.forEach(function (toggle) {
+        toggle.addEventListener('click', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          var contentId = toggle.dataset.toggle;
+          self.toggleContent(contentId);
+          self.hideContent(contentId);
+          _this.previousContentId = contentId;
         });
       });
     }
   }, {
-    key: "getContent",
-    value: function getContent(target) {
-      var dropdown = Array.from(target.parentElement.children);
-      var selectedItem = null;
-      dropdown.forEach(function (item) {
-        if (item.classList.toString().match(/phpimenta-ui-dropdown-content/i)) {
-          selectedItem = item;
-        }
-      });
-      return selectedItem;
+    key: "toggleContent",
+    value: function toggleContent(contentId) {
+      var element = document.getElementById(contentId);
+      var display = window.getComputedStyle(element).getPropertyValue('display');
+
+      if (display == 'none') {
+        document.getElementById(contentId).style.display = 'block';
+        this.currentContentId = contentId;
+      } else {
+        document.getElementById(contentId).style.display = 'none';
+      }
     }
   }, {
     key: "hideContent",
-    value: function hideContent(activeIndex) {
-      var contents = document.querySelectorAll('.phpimenta-ui-dropdown-content');
-      contents.forEach(function (content) {
-        if (content.dataset.index != activeIndex) {
-          content.style.display = 'none';
-        }
-      });
+    value: function hideContent() {
+      if (this.currentContentId != this.previousContentId && this.previousContentId != undefined) {
+        document.getElementById(this.previousContentId).style.display = 'none';
+      }
     }
   }]);
 

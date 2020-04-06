@@ -19,3 +19,8 @@ h3 { font-size: $h3-fontsize; }
 h4 { font-size: $h4-fontsize; }
 h5 { font-size: $h5-fontsize; }
 h6 { font-size: $h6-fontsize; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

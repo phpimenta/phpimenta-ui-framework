@@ -1,5 +1,5 @@
 /*!
-* Phpimenta UI Framework v0.2.5
+* Phpimenta UI Framework v0.2.6
 * Copyright 2020-2020 Phpimenta Software e Consultoria
 * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
 */
@@ -36,9 +36,6 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
-
-body {
-  line-height: 1; }
 
 ol, ul {
   list-style: none; }
@@ -86,6 +83,10 @@ h5 {
 
 h6 {
   font-size: 1rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
 
 .phpimenta-ui-container {
   width: 100%;
@@ -202,7 +203,10 @@ h6 {
           background-color: #e0e0e0; }
 
 .phpimenta-ui-dropdown {
-  position: relative; }
+  position: relative;
+  width: auto;
+  height: 0;
+  margin-bottom: 1rem; }
   .phpimenta-ui-dropdown .dropdown-toggle:after {
     content: '\2023';
     display: inline-block;
@@ -229,10 +233,6 @@ h6 {
       overflow-wrap: break-word; }
       .phpimenta-ui-dropdown .phpimenta-ui-dropdown-content a.dropdown-item:hover {
         background-color: #F2F2F2; }
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem; }
 
 .phpimenta-ui-nav {
   position: relative; }
@@ -567,7 +567,7 @@ p {
       content: '';
       display: block;
       position: absolute;
-      top: .3rem;
+      top: .25rem;
       left: .35rem;
       width: 0.5rem;
       height: 0.5rem;
@@ -704,5 +704,10 @@ p {
   margin-bottom: 1rem;
   min-height: 4rem;
   padding: 0.75rem; }
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212121; }
 
 /*# sourceMappingURL=phpimenta-ui-framework.css.map */

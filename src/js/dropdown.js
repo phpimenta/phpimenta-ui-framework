@@ -1,62 +1,50 @@
 class Dropdown {
   constructor() {
-    this.counter = 0;
+    this.previousContentId;
+    this.currentContentId;
   }
 
   enable() {
     let self = this;
     window.addEventListener('click', function (event) {
-      if (event.target.classList.value.split(' ').indexOf('dropdown-toggle') == -1) {
-        self.hideContent();
+      if (event.target.classList.value != 'phpimenta-ui-dropdown') {
+        let contents = document.querySelectorAll('.phpimenta-ui-dropdown-content');
+
+        contents.forEach(content => {
+          document.getElementById(content.id).style.display = 'none';
+        });
       }
     });
-    
-    let dropdowns = document.querySelectorAll('.phpimenta-ui-dropdown');
 
-    dropdowns.forEach(dropdown => {
-      Array.from(dropdown.children).forEach(children => {
-        if(children.classList.toString().split('dropdown-toggle')) {
-          children.addEventListener('click', function(event){
-            event.preventDefault();
-            self.hideContent(event.target.dataset.index);
-            let content = self.getContent(event.target);
-            let display = window.getComputedStyle(content).getPropertyValue('display');
+    let toggles = document.querySelectorAll('.dropdown-toggle');
 
-            if (event.target.dataset.index == undefined) {
-              event.target.dataset.index = self.counter;
-              content.dataset.index = self.counter;
-              self.counter++;
-            }
-
-            if (display == 'none') {
-              content.style.display = 'block';
-            } else {
-              content.style.display = 'none';
-            }
-          });
-        }
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        let contentId = toggle.dataset.toggle;
+        self.toggleContent(contentId);
+        self.hideContent(contentId);
+        this.previousContentId = contentId;
       });
     });
   }
 
-  getContent(target) {
-    let dropdown = Array.from(target.parentElement.children);
-    let selectedItem = null;
-    dropdown.forEach(item => {
-      if (item.classList.toString().match(/phpimenta-ui-dropdown-content/i)) {
-        selectedItem = item;
-      }
-    });
-    return selectedItem;
+  toggleContent(contentId) {
+    let element = document.getElementById(contentId);
+    let display = window.getComputedStyle(element).getPropertyValue('display');
+    if (display == 'none') {
+      document.getElementById(contentId).style.display = 'block';
+      this.currentContentId = contentId;
+    } else {
+      document.getElementById(contentId).style.display = 'none';
+    }
   }
 
-  hideContent(activeIndex) {
-    let contents = document.querySelectorAll('.phpimenta-ui-dropdown-content');
-    contents.forEach(content => {
-      if ( content.dataset.index != activeIndex) {
-        content.style.display = 'none';
-      }
-    });
+  hideContent() {
+    if (this.currentContentId != this.previousContentId && this.previousContentId != undefined) {
+      document.getElementById(this.previousContentId).style.display = 'none';
+    }
   }
 }
 

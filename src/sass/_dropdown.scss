@@ -1,5 +1,8 @@
 .phpimenta-ui-dropdown {
   position: relative;
+  width: auto;
+  height: 0;
+  margin-bottom: 1rem;
   .dropdown-toggle {
     &:after {
       content: '\2023';

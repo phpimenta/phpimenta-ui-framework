@@ -1,5 +1,5 @@
 /*!
-* Phpimenta UI Framework v0.2.5
+* Phpimenta UI Framework v0.2.6
 * Copyright 2020-2020 Phpimenta Software e Consultoria
 * Licensed under MIT (https://github.com/phpimenta/phpimenta-ui-framework/blob/master/LICENSE)
 */
@@ -24,8 +24,6 @@
 
 @import "_dropdown.scss";
 
-@import "_tags.scss";
-
 @import "_navs.scss";
 
 @import "_grid.scss";
@@ -39,3 +37,9 @@
 @import "_modal.scss";
 
 @import "_tabs.scss";
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $primary-text-color;
+}
