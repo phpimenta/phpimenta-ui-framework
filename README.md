@@ -1,3 +1,5 @@
+# Please note: This project has been discontinued and is obsolete. Do not use it
+
 # phpimenta-ui-framework
 
 **Starter template:**
